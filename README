@@ -1,0 +1,39 @@
+Plan for the CampaignStop Application
+
+
+  -Two types of users (different views for each type of user?)
+  -Two types are volunteers (campaign-manager nil) and campaign-managers (campaign-manager true)
+  
+  -If you are a campaign manager, you can create campaigns, if you are a volunteer, you can join a campaign (with click of a button)
+  -Campaign manager: your home screen is a list of your campaigns, click on a campaign to access the details of that campaign.
+  -View the users that are enrolled in that campaign
+  -Thjen there are a lot of turfs in the campaign that the campaign manager can create. 
+  -The campaign has a number of houses that need ot be assigned with addresses and coordinates.
+
+  -A volunteer user can be given a turf, which is an ongoign list of houses that they need to hit.
+
+  -On their page, they can see a map of the houses that they need to hit and the optimal route.
+
+
+
+  -If nobody logged in, then they view a splash page, otherwise render either the home page of the campaign manager (campaign console),
+  or the volunteer home page
+
+
+
+  Models/Controllers/Actions needed
+
+  -Campaign model, with lots of addresses referenced
+  -Campaign has a description, supporting, opposition
+  -Campaign has many houses
+  -Each house has an affiliation, address, and lat/long
+  
+  -that's it.
+
+
+  -Tonight's plan: work on the backend stuff, have all the backend stuff completed by tonight,
+   , finish doing the clustering algorithm, have the front-end fixed for the features specified
+    above.
+
+
+  -For the future, come up with a way to convert CVS files to mongo document to use in this database 
