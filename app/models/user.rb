@@ -22,12 +22,17 @@ class User
   field :last_sign_in_at,    :type => Time
   field :current_sign_in_ip, :type => String
   field :last_sign_in_ip,    :type => String
-  field :campaign_administrator, :type => Boolean
+  
+  
   ## Encryptable
   # field :password_salt, :type => String
 
+  #custom fields
+  field :name, :type => String
+  field :campaign_administrator, :type => Boolean
 
-  attr_accessible :campaign_administrator
+  #options
+  attr_accessible :campaign_administrator, :name, :email, :password, :password_confirmation
   ## Confirmable
   # field :confirmation_token,   :type => String
   # field :confirmed_at,         :type => Time

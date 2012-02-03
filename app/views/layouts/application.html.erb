@@ -9,7 +9,28 @@
 </head>
 <body>
 
-<%= yield %>
+
+  <div id="wrapper">
+     <div id="top-of-page">
+        <h1>CampaignStop</h1>  
+      </div>
+
+    
+    <%= yield %>
+     <div id="footer">
+        <ul id="footer-options">
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Contact", contact_path %></li>
+        </ul>
+
+        <p class="sid">
+          <%= link_to "A Sid Shanker Project", "http://about.me/SidShanker" %>
+        </p>
+
+     </div>
+
+
+   </div>
 
 </body>
 </html>

@@ -26,6 +26,46 @@ h1,h2,h3,h4,h5{
 
 #splash-descrip{
   width: 400px;
+}
+
+#wrapper{
+  width: 800px;
+  margin: auto;
+}
+
+#footer{
+  border-top: dashed 2px #777;
+  margin: 5px 0 0 0;
+  padding: 5px 0 0 0;
+}
+
+#footer ul{
+  float: left;
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+}
+
+#footer ul li {
+  list-style: none;
+  display: inline;
 
 
 }
+
+#footer ul li a{
+  color: #777; 
+
+}
+
+#footer .sid{
+  float: right;
+  
+}
+
+#footer .sid a{
+  color: #777;
+
+}
+

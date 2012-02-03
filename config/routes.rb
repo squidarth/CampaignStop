@@ -9,10 +9,9 @@ Campaignstop::Application.routes.draw do
   root :to => "pages#home"
   
   get "pages/home"
+  get "pages/about", :as => :about
 
-  get "pages/about"
-
-  get "pages/contact"
+  get "pages/contact", :as => :contact
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
