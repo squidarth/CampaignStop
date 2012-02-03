@@ -4,4 +4,7 @@ class Campaign
   field :supporting, :type => String
   field :opposition, :type => String
   field :state, :type => String
+
+
+
 end
