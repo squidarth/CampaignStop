@@ -24,9 +24,32 @@ h1,h2,h3,h4,h5{
   margin: auto;
 }
 
-#splash-descrip{
-  width: 400px;
+
+#splash-wrapper h1{
+  text-align: center;
+  font-size: 4.5em;
+  color: #1874CD;
+  margin: 10px 0 0 0;
+
+
 }
+
+#splash-descrip{
+  width: 500px;
+  margin: 50px 0 100px 150px;
+  font-size: 1.3em;
+}
+
+.sign-up-link{
+  padding: 30px 50px 30px 50px;
+  font-size: 2em;
+}
+
+#splash-links{
+  margin: 0 0 0 200px;
+
+}
+
 
 #wrapper{
   width: 800px;
@@ -36,22 +59,22 @@ h1,h2,h3,h4,h5{
 #top-of-page{
   background: #efefef;
   border-radius: 20px;
-  
-  padding: 0 8px 0 8px;
+ 
+  padding: 0 8px 5px 8px;
   margin: 10px 0 10px 0;
   overflow: auto;
 }
 
 #top-of-page h1{
   float: left;
-  color: #00008B;
+  color: #1874CD;
 }
 
 
 #top-of-page ul{
   float: right;
   list-style: none;
-  margin: 5px 0 0 0;
+  margin: 7px 0 0 0;
 }
 
 #top-of-page ul li{

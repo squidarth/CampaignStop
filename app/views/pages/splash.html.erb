@@ -10,18 +10,18 @@
 <body>
 
   <div id="splash-wrapper">
-    <h1>Campaign Stop</h1>
+    <h1>CampaignStop</h1>
 
 
     <br />
-    <p id="splash-descrip"><i>Campaign Stop has a single purpose, improving the experience of activists on campaigns and saving time.
+    <p id="splash-descrip">Campaign Stop has a single purpose, improving the experience of activists on campaigns and saving time.
   
       Use it to divide up your turf and reach houses more effiently.  <br /> <br />
-      </i></p>
+      </p>
 
-
-    <%= link_to "Sign Up!", new_user_registration_path, :class => "btn btn-primary" %> or <%= link_to "Sign In!", new_user_session_path, :class => "btn btn-primary" %>
-
+  <div id="splash-links">
+    <%= link_to "Sign Up!", new_user_registration_path, :class => "sign-up-link btn btn-primary" %>  <%= link_to "Sign In!", new_user_session_path, :class => "sign-up-link btn btn-danger" %>
+  </div>
   </div>
 </body>
 </html>

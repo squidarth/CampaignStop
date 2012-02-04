@@ -33,7 +33,7 @@ class Campaign
     require 'json'
     
     puts "dispatch Called"
-    a = 0.000001
+    a = 0.00001/2
     area_to_cover = area_to_cover(num_users, num_hours, a)
 
     
