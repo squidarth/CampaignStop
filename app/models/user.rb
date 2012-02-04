@@ -1,5 +1,7 @@
 class User
   include Mongoid::Document
+  include Mongoid::Paperclip
+  
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -32,7 +34,18 @@ class User
   field :campaign_administrator, :type => Boolean
 
   #options
-  attr_accessible :campaign_administrator, :name, :email, :password, :password_confirmation
+  attr_accessible :campaign_administrator, :name, :email, :password, :password_confirmation, :avatar
+  
+  has_and_belongs_to_many :campaigns
+
+  has_mongoid_attached_file :avatar,
+    :storage => :s3,
+    :bucket => 'campaignstop',
+    :styles => {:thumb => "75x75>", :small => "150x150>", :normal => "250x250>", :large => "450x450>" }, 
+    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :path => ":attachment/:id/:style.:extension" 
+
+  
   ## Confirmable
   # field :confirmation_token,   :type => String
   # field :confirmed_at,         :type => Time

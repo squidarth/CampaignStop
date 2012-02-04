@@ -1,3 +1,29 @@
 // Place all the styles related to the campaigns controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#dispatch-page ul{
+  list-style: none;
+  
+}
+
+#manage-links ul{
+  list-style: none;
+  border: solid 1px #777;
+  padding: 4px 4px 4px 4px;
+  margin: 10px 0 0 0;
+  width: 220px;
+}
+
+#manage-links ul li{
+  display: inline;
+}
+
+#manage-links ul li a{
+  font-weight: bold;
+  color: #777;
+
+
+}
+
+

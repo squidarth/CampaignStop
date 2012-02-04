@@ -1,2 +1,41 @@
-<h1>Campaigns#new</h1>
-<p>Find me in app/views/campaigns/new.html.erb</p>
+<%= form_for Campaign.new, :html => {:multipart => true } do |f|%>
+  <fieldset>
+    <legend>New Campaign</legend>
+    <div class="control-group">
+      <%= f.label :name %>
+      <div class="controls">
+        
+        <%= f.text_field :name %>
+
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label "For: " %>
+      <div class="controls">
+        
+        <%= f.text_field :supporting %>
+
+      </div>
+    </div>
+   
+    <div class="control-group">
+      <%= f.label "Logo" %>
+      <div class="controls">
+        
+        <%= f.file_field :image %>
+
+      </div>
+    </div>
+   <div class="control-group">
+      <div class="controls">
+        <%= f.hidden_field :administrator_id, :value => current_user.id.to_s %>
+        <%= f.submit "Create Campaign", :class => "btn btn-primary"  %>
+      </div>
+    </div>
+
+  </fieldset>
+
+
+
+<% end %>

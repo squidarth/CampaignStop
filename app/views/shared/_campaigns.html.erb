@@ -1,0 +1,21 @@
+
+<div id="campaign-gallery">
+  
+  <ul class="thumbnails">
+  <% campaigns.each do |campaign| %>
+
+    <%= link_to campaign do %>
+      <li class="span2"> 
+        <div class="thumbnail">
+    <%= image_tag campaign.image.url(:small) %>
+    <div class="caption">
+      <h3><%= campaign.name %></h3>
+    </div>
+      
+      
+      </li>
+
+    <% end %>
+  <% end %>
+  </ul>
+</div>

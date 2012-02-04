@@ -1,5 +1,17 @@
 Campaignstop::Application.routes.draw do
   
+  get "houses/create"
+
+  get "houses/destroy"
+
+  get "create/destroy"
+
+  match "/campaigns/:id/join" => "users#join_campaign", :as => :join_campaign 
+  match "/houses/create" => "houses#create", :as => :create_house
+  match "campaigns/:id/manage" => "campaigns#manage", :as => :campaign_manage
+  match "campaigns/:id/dispatch" => "campaigns#dispatch_houses", :as => :dispatch
+
+  match "campaigns/:id/manage/houses" => "campaigns#manage_houses", :as => :manage_houses
   resources :campaigns
   devise_for :users
   

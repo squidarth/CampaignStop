@@ -12,7 +12,14 @@
 
   <div id="wrapper">
      <div id="top-of-page">
-        <h1>CampaignStop</h1>  
+       <%= link_to root_path do %><h1>CampaignStop</h1><% end %>
+
+       <ul>
+          <li><%= link_to "View Profile", current_user %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+
+       </ul>
+
       </div>
 
     

@@ -5,9 +5,10 @@ class PagesController < ApplicationController
 
 
     else
-
+      @campaigns = Campaign.all
     end
   end
+
 
 
   def splash

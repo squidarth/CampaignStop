@@ -8,7 +8,10 @@ gem 'rails', '3.1.3'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'devise'
-
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem "aws-s3",            :require => "aws/s3"
+gem "aws-sdk"
+gem 'k_means'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

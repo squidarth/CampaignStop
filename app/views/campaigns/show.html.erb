@@ -1,2 +1,29 @@
-<h1>Campaigns#show</h1>
-<p>Find me in app/views/campaigns/show.html.erb</p>
+<ul class=thumbnails>
+  <li class="span4">
+    <div class="thumbnail">
+    <%= image_tag @campaign.image.url(:large) %>
+    <div class="caption">
+      <h1><%= @campaign.name %></h1>
+
+    </div>
+  </div>
+  </li>
+</ul>
+
+<% if !@campaign.users.include?(current_user) %><%= link_to "Join Campaign", join_campaign_path(@campaign), :class => "btn btn-primary" %><% end %> 
+
+<% if @campaign.administrator_id && @campaign.administrator_id.to_s == current_user.id.to_s %> <%= link_to "Manage Your Campaign", campaign_manage_path, :class => "btn btn-danger" %> <% end %>
+
+<h3>Volunteers: </h3>
+
+
+<ul>
+  <% @campaign.users.each do |user| %>
+    <li>
+      <%= user.name %>
+
+    </li>
+
+  <% end %>
+
+</ul>
