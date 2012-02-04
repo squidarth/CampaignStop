@@ -1,0 +1,58 @@
+<%= render "shared/manage" %>
+     
+
+
+<%= form_tag dispatch_path(@campaign) do %>
+  <fieldset>
+    <legend>Dispatch Volunteers </legend>
+    <h3>Volunteers</h3>
+    <% (0...10).each do |i| %>
+
+      <div class="control-group">
+        <div class="controls">
+        
+        <%= text_field_tag "user[#{i}]", "", :class => "user-input-field user-#{i} focused" %>
+        </div>
+      </div>
+    
+  <% end %>
+  
+  <%= link_to "More", "#", :id => "more-user" %>
+  <div class="control-group">
+    <h3>Allotted Time (in hours)</h3>
+    <div class="controls">
+    <%= text_field_tag "time","", :class => "focused" %>
+  </div>
+
+  </div>
+  <%= submit_tag "Dispatch", :class => "btn-primary" %>
+</fieldset>
+<% end %>
+
+
+<h3>Volunteers: </h3>
+
+<ul>
+  <% @campaign.users.each do |user| %>
+    <li><%= user.name %></li>
+
+  <% end %>
+
+</ul>
+
+<script type="text/javascript">
+  $(".user-input-field").hide();
+  $(".user-0").show();
+
+  
+  var i = 1;
+  $("#more-user").click(function(){
+       $(".user-" + i).fadeIn();
+       i++;
+      
+  });
+
+
+
+</script>
+

@@ -1,0 +1,13 @@
+<%= render "shared/manage" %>
+
+<h3>Dispatched Houses: </h3>
+
+<div id="dispatch-page">
+<ul>
+  <% @houses.each do |house| %>
+    <li><%= house.address %> <%= house.city %>,<%= house.state %></li>
+  <% end %>
+</ul>
+
+</div>
+

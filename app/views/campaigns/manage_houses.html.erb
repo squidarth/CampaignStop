@@ -1,0 +1,63 @@
+<%= render "shared/manage" %>
+
+
+
+<%= form_for(House.new,:url => create_house_path) do |f| %>
+
+  <fieldset>
+  <legend>Add House</legend>
+     <div class="control-group">
+
+      <%= f.label :address, :class => "control-label" %>
+      <div class="controls">
+
+        <%= f.text_field :address, :class => "input-xlarge focused", :id => "focusedInput" %>
+      </div>
+
+    </div> 
+
+    <div class="control-group">
+
+      <%= f.label :city, :class => "control-label" %>
+      <div class="controls">
+
+        <%= f.text_field :city, :class => "input-xlarge focused", :id => "focusedInput" %>
+      </div>
+
+    </div>
+
+    <div class="control-group">
+
+      <%= f.label :state, :class => "control-label" %>
+      <div class="controls">
+
+        <%= f.text_field :state, :class => "input-xlarge focused", :id => "focusedInput" %>
+      </div>
+
+    </div>
+
+    <div class="control-group">
+
+      <%= f.label :zip, :class => "control-label" %>
+      <div class="controls">
+
+        <%= f.text_field :zip, :class => "input-xlarge focused", :id => "focusedInput" %>
+      </div>
+
+    </div>
+
+  <%= f.hidden_field :campaign_id, :value => @campaign.id.to_s %>
+  <%= f.submit "Add House" %>
+  </fieldset>
+<% end %> 
+  
+ <ul>
+  <% @campaign.houses.each do |house| %>
+    <li><%= house.address %> <%= house.city %>, <%= house.state %> <%= house.zip %></li>
+
+  <% end %>
+
+
+
+</ul>
+
